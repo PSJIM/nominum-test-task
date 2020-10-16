@@ -1,0 +1,154 @@
+// font imports 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+// project variables
+// colors
+$pageBackgroundColor: white;
+$categoriesBg: #f9fafa;
+$filtersBg: #eceeef;
+$smileIcon: #b9ead1;
+$blockIcon: #dd3128;
+$infoIcon: #a5aeb2;
+$categoryHover: #d3dce1;
+// fonts
+$defaultFontStyle: 'Open Sans', sans-serif;
+
+* {
+  box-sizing: border-box;
+  font-family: $defaultFontStyle;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: $pageBackgroundColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoriesContainer{
+  height: 300px;
+  width: 95vw;
+}
+
+.categories{
+  width: 100%;
+  height: 250px;
+  padding: 10px 10px 0px 10px;
+  background-color: $categoriesBg;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+
+.category{
+  width: 220px;
+  min-height: 30px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  &:hover{
+    background-color: $categoryHover;
+  }
+  button{
+    min-width: 20px;
+    min-height: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #d3dce1;
+    border-radius: 5px;
+    outline: none;
+    &:hover{
+      background-color: #eee;
+    }
+  }
+  .infoIcon{
+    height: 12px;
+    width: 6px;
+    color: $infoIcon;
+    position: relative;
+    bottom: 1px;
+    left: 6px;
+  }
+  .spanContainer{
+    margin-left: 15px;
+  }
+  span{
+    font-family: $defaultFontStyle;
+    word-wrap: break-word;
+  }
+}
+
+.faceIcon{
+  color: $smileIcon;
+}
+
+.skullIcon{
+  color: $blockIcon;
+}
+
+.filtersBar{
+  width: 100%;
+  height: 50px;
+  padding: 5px 15px;
+  background-color: $filtersBg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .leftFiltersBarContainer{
+    display: flex;
+    align-items: center;
+    button{
+      height: 35px;
+      margin: 0px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      border: 0;
+      outline: none;
+      font-weight: 600;
+      &:hover{
+        background-color: #f2fafd;
+      }
+      &:active{
+        background-color: #000;
+      }
+      span{
+        padding-left: 5px;
+      }
+    }
+  }
+  .rightFiltersBarContainer{
+    button{
+      height: 23px;
+      width: 120px;
+      margin-left: 5px;
+      border: 1px solid #1ba3d5;
+      border-radius: 2px;
+      background-color: #fff;
+      padding: 0px 15px;
+      font-weight: 600;
+      outline: none;
+      &:hover{
+        background-color: #f2fafd;
+      }
+    }
+    .active{
+      background-color: #1ba3d5;
+      color: #fff;
+      &:hover{
+        background-color: rgb(33, 181, 201);
+      }
+    }
+  }
+}
