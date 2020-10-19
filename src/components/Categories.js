@@ -57,8 +57,11 @@ const Categories = ({ categories }) => {
         <div className="spanContainer">
           <span className="categoryName">
             {category.name}
+            <div className="hint">
+              <FontAwesomeIcon icon={faInfo} className="infoIcon" />
+              <span className="hintText">{category.description}</span>
+            </div>
           </span>
-          <FontAwesomeIcon icon={faInfo} className="infoIcon" />
         </div>
       </div>
     ))
